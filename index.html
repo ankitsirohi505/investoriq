@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://miet3.my.site.com; form-action 'none'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>InvestorIQ | Infrastructure and real assets for institutional investors (demo)</title>
+<meta name="description" content="InvestorIQ is a fictional Australian manager of infrastructure and core property, created for a Salesforce demonstration. Explore the funds and request access to the investor portal.">
+<meta name="theme-color" content="#0A4A52">
+<link rel="canonical" href="https://ankitsirohi505.github.io/investoriq/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestorIQ">
+<meta property="og:title" content="InvestorIQ | Infrastructure and real assets for institutional investors">
+<meta property="og:description" content="Essential infrastructure and real assets for investors who think in decades. A fictional brand for a Salesforce demonstration.">
+<meta property="og:url" content="https://ankitsirohi505.github.io/investoriq/">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="InvestorIQ | Infrastructure and real assets">
+<meta name="twitter:description" content="A fictional Australian infrastructure and real-assets manager, built for a Salesforce demonstration.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/app.css">
+<script src="assets/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header is-top" id="site-header">
+  <div class="container header-in">
+    <a class="brand" href="#top" aria-label="InvestorIQ home">
+      <svg class="mark" width="30" height="30" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect class="mark-bg" width="28" height="28" rx="7"/><path class="mark-roof" d="M8 15.5l6-5.5 6 5.5"/><path class="mark-line" d="M7.5 20.5h13"/></svg>
+      <span class="wordmark">Investor<b>IQ</b></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#strategies">Strategies</a></li>
+        <li><a href="#funds">Funds</a></li>
+        <li><a href="#responsible-investment">Responsible investment</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="login-link" href="https://miet3.my.site.com/investors/login" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>
+        Investor login
+      </a>
+      <a class="btn btn-mint btn-sm" href="#request-access" data-scroll-form>Request access</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#strategies">Strategies</a></li>
+        <li><a href="#funds">Funds</a></li>
+        <li><a href="#responsible-investment">Responsible investment</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-actions">
+      <a class="btn btn-mint btn-lg" href="#request-access" data-scroll-form>Request portal access</a>
+      <a class="btn btn-ghost btn-lg" href="https://miet3.my.site.com/investors/login" rel="noopener">Investor login</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <svg class="hero-waves" width="900" height="520" viewBox="0 0 900 520" aria-hidden="true" focusable="false"><g><path d="M0 60c140-40 260 40 380 0s260-70 520-10"/><path d="M0 112c140-40 260 40 380 0s260-70 520-10"/><path d="M0 164c140-40 260 40 380 0s260-70 520-10"/><path d="M0 216c140-40 260 40 380 0s260-70 520-10"/><path d="M0 268c140-40 260 40 380 0s260-70 520-10"/><path d="M0 320c140-40 260 40 380 0s260-70 520-10"/><path d="M0 372c140-40 260 40 380 0s260-70 520-10"/><path d="M0 424c140-40 260 40 380 0s260-70 520-10"/><path d="M0 476c140-40 260 40 380 0s260-70 520-10"/></g></svg>
+  <div class="container hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-dark">Infrastructure and real assets</p>
+      <h1 id="hero-title">Essential infrastructure and real assets for investors who <em>think in decades.</em></h1>
+      <p class="hero-sub">From Sydney, we own and manage the toll roads, energy networks, water, digital infrastructure and prime property that communities rely on every day, for superannuation funds, pension funds, insurers and other long-term institutional investors.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-mint btn-lg" href="#request-access" data-scroll-form>Request portal access
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline-light btn-lg" href="#funds">Explore our funds</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="hero-art" viewBox="0 0 640 510" role="img" aria-labelledby="hero-art-title" focusable="false">
+        <title id="hero-art-title">Line drawing of a container port, city towers, a cable-stayed bridge and wind turbines along one horizon</title>
+        <defs>
+          <radialGradient id="ha-disc" cx="50%" cy="34%" r="66%">
+            <stop offset="0" stop-color="#15737D"/>
+            <stop offset=".55" stop-color="#0D5963"/>
+            <stop offset="1" stop-color="#0A4A52"/>
+          </radialGradient>
+          <clipPath id="ha-clip"><circle cx="340" cy="262" r="222"/></clipPath>
+          <linearGradient id="ha-horizon" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#3FD9A3" stop-opacity="0"/>
+            <stop offset=".18" stop-color="#3FD9A3" stop-opacity=".85"/>
+            <stop offset=".82" stop-color="#3FD9A3" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#3FD9A3" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="ha-water" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#06343A" stop-opacity=".25"/>
+            <stop offset="1" stop-color="#06343A" stop-opacity=".85"/>
+          </linearGradient>
+        </defs>
+        <circle cx="340" cy="262" r="222" fill="url(#ha-disc)"/>
+        <g clip-path="url(#ha-clip)">
+          <g class="ha-contours">
+            <path d="M100 92c90-26 170 26 260 0s170-46 300-6"/>
+            <path d="M100 136c90-26 170 26 260 0s170-46 300-6"/>
+            <path d="M100 180c90-26 170 26 260 0s170-46 300-6"/>
+            <path d="M100 224c90-26 170 26 260 0s170-46 300-6"/>
+            <path d="M100 268c90-26 170 26 260 0s170-46 300-6"/>
+            <path d="M100 312c90-26 170 26 260 0s170-46 300-6"/>
+          </g>
+          <rect x="100" y="362" width="480" height="140" fill="url(#ha-water)"/>
+          <g class="ha-ripples">
+            <path d="M236 376h70M330 376h96M450 376h40"/>
+            <path d="M262 392h44M352 392h60M180 392h30"/>
+            <path d="M300 410h40M370 410h30M220 410h24"/>
+            <path d="M330 430h28M260 430h18"/>
+          </g>
+        </g>
+        <circle class="ha-rim" cx="340" cy="262" r="222"/>
+        <path class="ha-ticks" d="M569.7 286.1L574.7 286.7M566.0 310.0L570.8 311.1M559.7 333.4L564.4 334.9M551.0 356.0L555.6 358.0M526.9 397.8L530.9 400.7M511.7 416.6L515.4 419.9M494.6 433.7L497.9 437.4M475.8 448.9L478.7 452.9M434.0 473.0L436.0 477.6M411.4 481.7L412.9 486.4M388.0 488.0L389.1 492.8M364.1 491.7L364.7 496.7M315.9 491.7L315.3 496.7M292.0 488.0L290.9 492.8M268.6 481.7L267.1 486.4M246.0 473.0L244.0 477.6M204.2 448.9L201.3 452.9M185.4 433.7L182.1 437.4M168.3 416.6L164.6 419.9M153.1 397.8L149.1 400.7M129.0 356.0L124.4 358.0M120.3 333.4L115.6 334.9M114.0 310.0L109.2 311.1M110.3 286.1L105.3 286.7M110.3 237.9L105.3 237.3M114.0 214.0L109.2 212.9M120.3 190.6L115.6 189.1M129.0 168.0L124.4 166.0M153.1 126.2L149.1 123.3M168.3 107.4L164.6 104.1M185.4 90.3L182.1 86.6M204.2 75.1L201.3 71.1M246.0 51.0L244.0 46.4M268.6 42.3L267.1 37.6M292.0 36.0L290.9 31.2M315.9 32.3L315.3 27.3M364.1 32.3L364.7 27.3M388.0 36.0L389.1 31.2M411.4 42.3L412.9 37.6M434.0 51.0L436.0 46.4M475.8 75.1L478.7 71.1M494.6 90.3L497.9 86.6M511.7 107.4L515.4 104.1M526.9 126.2L530.9 123.3M551.0 168.0L555.6 166.0M559.7 190.6L564.4 189.1M566.0 214.0L570.8 212.9M569.7 237.9L574.7 237.3"/>
+        <path class="ha-ticks ha-ticks-major" d="M569.0 262.0L579.0 262.0M538.3 376.5L547.0 381.5M454.5 460.3L459.5 469.0M340.0 491.0L340.0 501.0M225.5 460.3L220.5 469.0M141.7 376.5L133.0 381.5M111.0 262.0L101.0 262.0M141.7 147.5L133.0 142.5M225.5 63.7L220.5 55.0M340.0 33.0L340.0 23.0M454.5 63.7L459.5 55.0M538.3 147.5L547.0 142.5"/>
+        <path class="ha-arc" d="M126.6 200.8A222 222 0 0 1 293.8 44.9"/>
+        <circle class="ha-arc-dot" cx="293.8" cy="44.9" r="3.5"/>
+
+        <g class="ha-line">
+          <path d="M30 362V246M66 362V246M24 246h50M18 232h104M48 232V196L18 232M48 196l74 36"/>
+          <path d="M28 246l10-14M66 246l-10-14M30 300h36M30 300l36-54M66 300L30 246"/>
+          <path d="M92 232v8h10v-8M97 240v52"/>
+          <path d="M84 362v-16h22v16M106 362v-16h22v16M95 346v-16h22v16"/>
+          <path d="M132 362v-62h26v62"/>
+          <path d="M158 362V196l22-18 22 18v166M180 178v-22"/>
+          <path d="M206 362V228h32v134M210 228v-8h24v8"/>
+        </g>
+        <g class="ha-line ha-fine">
+          <path d="M138 312h14M138 324h14M138 336h14M138 348h14"/>
+          <path d="M166 204v152M173 200v156M180 198v158M187 200v156M194 204v152"/>
+          <path d="M211 240h22M211 252h22M211 264h22M211 276h22M211 288h22M211 300h22M211 312h22M211 324h22M211 336h22M211 348h22"/>
+        </g>
+        <g class="ha-line">
+          <path d="M246 362l16-36h192l16 36M268 331h180"/>
+          <path d="M344 362l14-212 14 212"/>
+        </g>
+        <g class="ha-line ha-cables">
+          <path d="M358 166L274 326M358 180L294 326M358 194L314 326M358 208L334 326M358 208L382 326M358 194L402 326M358 180L422 326M358 166L442 326"/>
+        </g>
+        <g class="ha-line">
+          <path d="M517 362l2-154h2l2 154"/>
+          <path d="M589 362l1.5-112h1l1.5 112"/>
+          <rect x="514" y="200" width="12" height="7" rx="2"/>
+          <rect x="586" y="244" width="9" height="5" rx="2"/>
+        </g>
+        <g class="ha-rotor ha-rotor-1">
+          <path class="ha-blade" d="M520 204c3-12 2-30 0-42-2 12-3 30 0 42z"/>
+          <path class="ha-blade" d="M520 204c3-12 2-30 0-42-2 12-3 30 0 42z" transform="rotate(120 520 204)"/>
+          <path class="ha-blade" d="M520 204c3-12 2-30 0-42-2 12-3 30 0 42z" transform="rotate(240 520 204)"/>
+          <circle cx="520" cy="204" r="2.6"/>
+        </g>
+        <g class="ha-rotor ha-rotor-2">
+          <path class="ha-blade" d="M591 247c2.2-9 1.5-22 0-30-1.5 8-2.2 21 0 30z"/>
+          <path class="ha-blade" d="M591 247c2.2-9 1.5-22 0-30-1.5 8-2.2 21 0 30z" transform="rotate(120 591 247)"/>
+          <path class="ha-blade" d="M591 247c2.2-9 1.5-22 0-30-1.5 8-2.2 21 0 30z" transform="rotate(240 591 247)"/>
+          <circle cx="591" cy="247" r="2"/>
+        </g>
+        <path class="ha-horizon" d="M0 362h640"/>
+        <path class="ha-network" d="M180 156Q268 96 358 150Q446 112 520 204"/>
+        <g class="ha-nodes">
+          <circle class="ha-pulse" cx="180" cy="156" r="9"/><circle class="ha-node" cx="180" cy="156" r="3.5"/>
+          <circle class="ha-pulse ha-d2" cx="358" cy="150" r="9"/><circle class="ha-node" cx="358" cy="150" r="3.5"/>
+          <circle class="ha-pulse ha-d3" cx="520" cy="204" r="9"/><circle class="ha-node" cx="520" cy="204" r="3.5"/>
+          <circle class="ha-pulse ha-d4" cx="97" cy="292" r="9"/><circle class="ha-node" cx="97" cy="292" r="3.5"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="container">
+    <dl class="hero-stats">
+      <div class="stat"><dt>Funds under management</dt><dd><span class="stat-num">A$14.2bn</span></dd></div>
+      <div class="stat"><dt>Long-life assets in Australia, North America and Europe</dt><dd><span class="stat-num">14</span></dd></div>
+      <div class="stat"><dt>Institutional and wholesale investors</dt><dd><span class="stat-num">120+</span></dd></div>
+      <div class="stat"><dt>Investing for institutions since our first fund launched</dt><dd><span class="stat-num">2017</span></dd></div>
+    </dl>
+    <p class="hero-note">Illustrative figures for a fictional brand. Funds under management is the sum of draft, unaudited fund NAVs at 30 September 2026.</p>
+  </div>
+</section>
+
+<section class="section" id="strategies" aria-labelledby="strategies-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">What we invest in</p>
+      <h2 id="strategies-title">Three strategies, one discipline: own essential assets for the long term.</h2>
+      <p class="lede">We invest where demand is steady, revenues are regulated, contracted or indexed, and our people can add value through hands-on asset management.</p>
+    </div>
+    <div class="strategy-grid">
+      <article class="strategy-card reveal">
+        <div class="strategy-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false"><path d="M4 30h40M14 38V12M34 38V12M14 12q10 18 20 0M4 26q6-6 10-14M34 12q4 8 10 14M19 20v10M24 21v9M29 20v10"/></svg>
+        </div>
+        <h3>Australian infrastructure</h3>
+        <p>Core and core-plus infrastructure that underpins the Australian economy: toll roads, airports, water, energy and digital networks. More than 80% of earnings come from regulated or contracted revenue.</p>
+        <ul class="tags" aria-label="Sectors">
+          <li>Transport</li><li>Utilities</li><li>Energy</li><li>Digital</li>
+        </ul>
+        <a class="text-link" href="#fund-aif">Australian Infrastructure Fund <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="strategy-card reveal">
+        <div class="strategy-icon strategy-icon-cpf" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false"><path d="M6 42h36M11 42V13l13-6 13 6v29M17 18h4M27 18h4M17 25h4M27 25h4M17 32h4M27 32h4M21 42v-5h6v5"/></svg>
+        </div>
+        <h3>Core property</h3>
+        <p>Prime Australian office, logistics and retail property let to high-quality tenants on long leases, managed for stable and growing income with quarterly distributions.</p>
+        <ul class="tags" aria-label="Sectors">
+          <li>Office</li><li>Logistics</li><li>Retail</li>
+        </ul>
+        <a class="text-link" href="#fund-cpf">Core Property Fund <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="strategy-card reveal">
+        <div class="strategy-icon strategy-icon-gif" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="16"/><path d="M8 24h32M10.5 16h27M10.5 32h27"/><ellipse cx="24" cy="24" rx="7" ry="16"/><circle class="dot" cx="36" cy="12" r="3"/></svg>
+        </div>
+        <h3>Global infrastructure</h3>
+        <p>Energy transition, transport and digital assets across North America and Europe, hedged to Australian dollars, to diversify an Australian portfolio beyond the domestic market.</p>
+        <ul class="tags" aria-label="Sectors">
+          <li>Energy transition</li><li>Transport</li><li>Digital</li>
+        </ul>
+        <a class="text-link" href="#fund-gif">Global Infrastructure Funds <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+    <ol class="principles reveal" aria-label="How we invest">
+      <li><span class="principle-num" aria-hidden="true">01</span><div><h3>Essential</h3><p>Assets communities rely on every day, whatever the economic cycle.</p></div></li>
+      <li><span class="principle-num" aria-hidden="true">02</span><div><h3>Inflation-linked</h3><p>Regulated, contracted or indexed revenues that tend to rise with prices.</p></div></li>
+      <li><span class="principle-num" aria-hidden="true">03</span><div><h3>Long-life</h3><p>Concessions, networks and leases measured in decades, not quarters.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-subtle" id="funds" aria-labelledby="funds-title">
+  <div class="container">
+    <div class="section-head section-head-split reveal">
+      <div>
+        <p class="eyebrow">Our funds</p>
+        <h2 id="funds-title">Four funds. One standard of reporting.</h2>
+      </div>
+      <p class="lede">Every fund reports through the same secure investor portal, with the same documents, the same data and the same people behind it.</p>
+    </div>
+    <div class="fund-grid">
+      <article class="fund-card fund-aif reveal" id="fund-aif" aria-labelledby="fund-aif-name">
+        <div class="fund-top">
+          <span class="fund-code">AIF</span>
+          <span class="chip chip-ok"><span class="chip-dot" aria-hidden="true"></span>Open</span>
+        </div>
+        <h3 id="fund-aif-name">Australian Infrastructure Fund</h3>
+        <p class="fund-tagline">Australian transport, utilities, energy and digital infrastructure, held for long-term income and growth.</p>
+        <dl class="fund-metrics">
+          <div><dt>Draft NAV · Q3 2026</dt><dd>A$4.49bn</dd></div>
+          <div><dt>Target net IRR</dt><dd>9.0%</dd></div>
+          <div><dt>Assets</dt><dd>6</dd></div>
+        </dl>
+        <ul class="tags tags-sm" aria-label="Sectors"><li>Transport</li><li>Utilities</li><li>Energy</li><li>Digital</li></ul>
+        <dl class="fund-facts">
+          <div><dt>Structure</dt><dd>Closed-ended limited partnership</dd></div>
+          <div><dt>Vintage</dt><dd>2019</dd></div>
+          <div><dt>Administrator</dt><dd>JP Morgan</dd></div>
+          <div><dt>Reporting</dt><dd>Quarterly</dd></div>
+        </dl>
+        <div class="fund-actions">
+          <a class="btn btn-primary" href="#request-access" data-fund="AIF">Request data room access</a>
+          <a class="text-link" href="#portfolio" data-filter="AIF">View assets <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="fund-card fund-cpf reveal" id="fund-cpf" aria-labelledby="fund-cpf-name">
+        <div class="fund-top">
+          <span class="fund-code">CPF</span>
+          <span class="chip chip-ok"><span class="chip-dot" aria-hidden="true"></span>Open · monthly applications</span>
+        </div>
+        <h3 id="fund-cpf-name">Core Property Fund</h3>
+        <p class="fund-tagline">Australian office, logistics and retail property, managed for stable income. Weighted average lease expiry of 6.8 years and 97% occupancy.</p>
+        <dl class="fund-metrics">
+          <div><dt>Draft NAV · Q3 2026</dt><dd>A$2.91bn</dd></div>
+          <div><dt>Target net IRR</dt><dd>7.5%</dd></div>
+          <div><dt>Assets</dt><dd>5</dd></div>
+        </dl>
+        <ul class="tags tags-sm" aria-label="Sectors"><li>Office</li><li>Logistics</li><li>Retail</li></ul>
+        <dl class="fund-facts">
+          <div><dt>Structure</dt><dd>Open-ended unit trust</dd></div>
+          <div><dt>Vintage</dt><dd>2017</dd></div>
+          <div><dt>Administrator</dt><dd>Apex</dd></div>
+          <div><dt>Reporting</dt><dd>Quarterly</dd></div>
+        </dl>
+        <div class="fund-actions">
+          <a class="btn btn-primary" href="#request-access" data-fund="CPF">Request data room access</a>
+          <a class="text-link" href="#portfolio" data-filter="CPF">View assets <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="fund-card fund-gif reveal" id="fund-gif" aria-labelledby="fund-gif-name">
+        <div class="fund-top">
+          <span class="fund-code">GIF</span>
+          <span class="chip chip-ok"><span class="chip-dot" aria-hidden="true"></span>Open</span>
+        </div>
+        <h3 id="fund-gif-name">Global Infrastructure Fund</h3>
+        <p class="fund-tagline">Energy transition, transport and digital infrastructure across North America and Europe, hedged to Australian dollars.</p>
+        <dl class="fund-metrics">
+          <div><dt>Draft NAV · Q3 2026</dt><dd>A$6.78bn</dd></div>
+          <div><dt>Target net IRR</dt><dd>10.0%</dd></div>
+          <div><dt>Assets</dt><dd>3</dd></div>
+        </dl>
+        <ul class="tags tags-sm" aria-label="Sectors"><li>Energy transition</li><li>Transport</li><li>Digital</li></ul>
+        <dl class="fund-facts">
+          <div><dt>Structure</dt><dd>Closed-ended limited partnership</dd></div>
+          <div><dt>Vintage</dt><dd>2021</dd></div>
+          <div><dt>Administrator</dt><dd>JP Morgan</dd></div>
+          <div><dt>Reporting</dt><dd>Quarterly</dd></div>
+        </dl>
+        <div class="fund-actions">
+          <a class="btn btn-primary" href="#request-access" data-fund="GIF">Request data room access</a>
+          <a class="text-link" href="#portfolio" data-filter="GIF">View assets <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="fund-card fund-gif2 fund-card-dark reveal" id="fund-gif2" aria-labelledby="fund-gif2-name">
+        <div class="fund-top">
+          <span class="fund-code">GIF II</span>
+          <span class="chip chip-warn"><span class="chip-dot" aria-hidden="true"></span>Pre-launch · by invitation</span>
+        </div>
+        <h3 id="fund-gif2-name">Global Infrastructure Fund II</h3>
+        <p class="fund-tagline">The successor to GIF, with a sharper focus on global energy transition and digital infrastructure. Existing investors receive priority allocation at first close.</p>
+        <dl class="fund-metrics">
+          <div><dt>Target fund size</dt><dd>A$5.0bn</dd></div>
+          <div><dt>Target net IRR</dt><dd>10.5%</dd></div>
+          <div><dt>First close</dt><dd>Q2 2027</dd></div>
+        </dl>
+        <ul class="tags tags-sm" aria-label="Sectors"><li>Energy transition</li><li>Digital</li></ul>
+        <dl class="fund-facts">
+          <div><dt>Structure</dt><dd>Closed-ended limited partnership</dd></div>
+          <div><dt>Vintage</dt><dd>2027</dd></div>
+          <div><dt>Administrator</dt><dd>JP Morgan</dd></div>
+          <div><dt>Offer pack</dt><dd>In the portal, by invitation</dd></div>
+        </dl>
+        <div class="fund-actions">
+          <a class="btn btn-mint" href="#request-access" data-fund="GIF2">Request data room access</a>
+        </div>
+      </article>
+    </div>
+    <p class="footnote">Draft NAV is unaudited and supplied by each fund's administrator; final NAV is published with the quarterly report. Target returns are illustrative, are not forecasts and are not guaranteed. All figures are demonstration data for a fictional brand.</p>
+  </div>
+</section>
+
+<section class="section" id="portfolio" aria-labelledby="portfolio-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Portfolio highlights</p>
+      <h2 id="portfolio-title">A portfolio you can see, asset by asset.</h2>
+      <p class="lede">Fourteen long-life assets across five Australian states and three overseas markets. Investors see look-through exposure to every one of them in the portal.</p>
+    </div>
+    <div class="portfolio-layout">
+      <figure class="map-card reveal">
+        <svg class="aus-map" viewBox="0 0 512 471" role="img" aria-labelledby="map-title map-desc" focusable="false">
+          <title id="map-title">Map of InvestorIQ assets in Australia</title>
+          <desc id="map-desc">Eleven assets: six in the Australian Infrastructure Fund and five in the Core Property Fund, in New South Wales, Victoria, Queensland, Western Australia and South Australia.</desc>
+          <defs>
+            <pattern id="map-dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3"/></pattern>
+            <path id="aus-main" d="M363.3 25.6L373.7 46.4L378.3 65.9L387.6 72.4L395.7 85.4L396.9 99.7L402.7 108.8L405.0 124.4L414.2 136.1L423.5 142.6L436.3 150.4L442.0 163.4L449.0 173.8L457.1 177.7L460.6 188.1L465.2 197.2L476.8 206.3L483.7 215.4L487.2 211.5L486.1 225.8L486.1 236.2L489.5 249.2L491.9 258.3L488.4 271.3L486.1 281.7L483.7 294.7L479.1 307.7L471.0 314.2L465.2 323.3L464.1 328.5L460.6 335.0L458.3 342.8L452.5 351.9L451.3 361.0L449.0 374.0L440.9 376.6L430.5 377.9L421.2 381.8L413.1 388.3L407.3 394.8L402.7 389.6L396.9 387.0L391.1 384.4L386.5 383.1L379.5 388.3L374.9 390.9L362.1 385.7L352.9 385.7L344.8 381.8L339.0 379.2L332.0 371.4L329.7 362.3L325.1 351.9L318.1 349.3L313.5 349.3L317.0 342.8L317.0 336.3L313.5 331.1L310.0 336.3L306.5 342.8L299.6 344.1L303.1 336.3L306.5 328.5L308.8 318.1L308.8 310.3L304.2 316.8L298.4 323.3L290.3 332.4L286.8 338.9L281.0 336.3L278.7 328.5L271.8 318.1L266.0 312.9L260.2 303.8L248.6 302.5L237.0 296.0L225.4 297.3L206.9 298.6L190.7 305.1L174.5 306.4L158.3 314.2L147.8 323.3L132.8 327.2L118.9 325.9L102.7 328.5L94.6 333.7L81.8 341.5L72.5 342.8L62.1 341.5L51.7 336.3L44.7 332.4L45.9 323.3L51.7 319.4L52.9 309.0L52.9 299.9L49.4 290.8L44.7 279.1L43.6 267.4L40.1 259.6L35.5 249.2L30.8 236.2L25.1 227.1L28.5 220.6L28.5 208.9L26.2 201.1L30.8 188.1L32.0 177.7L35.5 169.9L40.1 171.2L47.1 166.0L58.6 158.2L66.8 154.3L77.2 154.3L86.4 150.4L95.7 146.5L107.3 142.6L116.6 138.7L123.5 128.3L128.1 119.2L130.5 110.1L136.3 99.7L143.2 106.2L147.8 98.4L154.8 89.3L162.9 81.5L171.0 73.7L179.1 68.5L188.4 68.5L194.2 76.3L197.6 84.1L202.3 78.9L210.4 80.2L213.9 71.1L219.7 60.7L222.0 52.9L227.8 47.7L234.7 45.1L242.8 45.1L248.6 36.0L255.6 38.6L263.7 41.2L272.9 42.5L281.0 45.1L288.0 42.5L296.1 43.8L297.3 50.3L292.6 58.1L286.8 60.7L282.2 72.4L281.0 81.5L289.2 88.0L297.3 93.2L306.5 98.4L315.8 104.9L325.1 112.7L334.3 116.6L343.6 112.7L349.4 99.7L352.9 82.8L352.9 67.2L352.9 55.5L355.2 47.7L358.7 34.7L363.3 25.6Z"/>
+            <path id="aus-tas" d="M387.6 415.6L396.9 418.2L407.3 422.1L415.4 419.5L424.7 418.2L430.5 418.2L430.5 427.3L430.5 435.1L425.8 445.5L418.9 449.4L414.2 453.3L406.1 452.0L399.2 444.2L394.6 435.1L391.1 427.3L387.6 415.6Z"/>
+          </defs>
+          <use href="#aus-main" class="map-land"/>
+          <use href="#aus-tas" class="map-land"/>
+          <use href="#aus-main" class="map-outline"/>
+          <use href="#aus-tas" class="map-outline"/>
+          <g class="map-labels" aria-hidden="true">
+            <text x="446" y="353" text-anchor="end">Sydney</text>
+            <text x="388" y="405" text-anchor="middle">Melbourne</text>
+            <text x="474" y="263" text-anchor="end">Brisbane</text>
+            <text x="72" y="306">Perth</text>
+            <text x="312" y="366" text-anchor="end">Adelaide</text>
+            <text x="388" y="96" text-anchor="end">Cairns</text>
+          </g>
+          <g class="map-pins">
+            <g class="pin pin-aif" data-asset="coastal-motorway" transform="translate(467 311)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-aif" data-asset="northern-gateway" transform="translate(401 106)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-aif" data-asset="riverside-water" transform="translate(407 366)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-aif" data-asset="western-plains" transform="translate(360 372)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-aif" data-asset="inland-freight" transform="translate(429 317)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-aif" data-asset="sunshine-fibre" transform="translate(483 231)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-cpf" data-asset="southbank" transform="translate(389 381)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-cpf" data-asset="parramatta" transform="translate(458 328)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-cpf" data-asset="fortitude-valley" transform="translate(484 245)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-cpf" data-asset="perth-central" transform="translate(55 302)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+            <g class="pin pin-cpf" data-asset="adelaide-campus" transform="translate(318 341)"><circle class="pin-halo" r="11"/><circle class="pin-dot" r="5"/></g>
+          </g>
+        </svg>
+        <figcaption class="map-legend">
+          <span><i class="legend-dot legend-aif" aria-hidden="true"></i>Australian Infrastructure Fund</span>
+          <span><i class="legend-dot legend-cpf" aria-hidden="true"></i>Core Property Fund</span>
+        </figcaption>
+      </figure>
+
+      <div class="asset-panel reveal">
+        <div class="filter-bar" role="group" aria-label="Filter assets by fund">
+          <button type="button" class="filter-chip" data-filter-btn="ALL" aria-pressed="true">All</button>
+          <button type="button" class="filter-chip" data-filter-btn="AIF" aria-pressed="false">AIF</button>
+          <button type="button" class="filter-chip" data-filter-btn="CPF" aria-pressed="false">CPF</button>
+          <button type="button" class="filter-chip" data-filter-btn="GIF" aria-pressed="false">GIF</button>
+        </div>
+        <div class="asset-group" data-group="AU">
+          <h3 class="asset-group-title">Australia</h3>
+          <ul class="asset-list">
+            <li class="asset" data-fund="AIF" data-asset="coastal-motorway"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Coastal Motorway Link</span><span class="asset-meta">Toll road · NSW</span><span class="asset-fund">AIF</span></li>
+            <li class="asset" data-fund="AIF" data-asset="northern-gateway"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Northern Gateway Airport</span><span class="asset-meta">Airport, minority stake · QLD</span><span class="asset-fund">AIF</span></li>
+            <li class="asset" data-fund="AIF" data-asset="riverside-water"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Riverside Water Utility</span><span class="asset-meta">Water · VIC</span><span class="asset-fund">AIF</span></li>
+            <li class="asset" data-fund="AIF" data-asset="western-plains"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Western Plains Wind Portfolio</span><span class="asset-meta">Wind energy · VIC</span><span class="asset-fund">AIF</span></li>
+            <li class="asset" data-fund="AIF" data-asset="inland-freight"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Inland Freight Terminal</span><span class="asset-meta">Freight · NSW</span><span class="asset-fund">AIF</span></li>
+            <li class="asset" data-fund="AIF" data-asset="sunshine-fibre"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Sunshine Fibre Network</span><span class="asset-meta">Fibre · QLD</span><span class="asset-fund">AIF</span></li>
+            <li class="asset" data-fund="CPF" data-asset="southbank"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Southbank Office Tower</span><span class="asset-meta">Office · VIC</span><span class="asset-fund">CPF</span></li>
+            <li class="asset" data-fund="CPF" data-asset="parramatta"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Parramatta Business Park</span><span class="asset-meta">Office · NSW</span><span class="asset-fund">CPF</span></li>
+            <li class="asset" data-fund="CPF" data-asset="fortitude-valley"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Fortitude Valley Logistics Hub</span><span class="asset-meta">Logistics · QLD</span><span class="asset-fund">CPF</span></li>
+            <li class="asset" data-fund="CPF" data-asset="perth-central"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Perth Central Retail</span><span class="asset-meta">Retail · WA</span><span class="asset-fund">CPF</span></li>
+            <li class="asset" data-fund="CPF" data-asset="adelaide-campus"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Adelaide Office Campus</span><span class="asset-meta">Office · SA</span><span class="asset-fund">CPF</span></li>
+          </ul>
+        </div>
+        <div class="asset-group" data-group="GLOBAL">
+          <h3 class="asset-group-title">Offshore</h3>
+          <ul class="asset-list">
+            <li class="asset" data-fund="GIF"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Texas Midstream Partners</span><span class="asset-meta">Gas gathering and processing · Texas, US</span><span class="asset-fund">GIF</span></li>
+            <li class="asset" data-fund="GIF"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Iberian Toll Roads</span><span class="asset-meta">Motorway concessions · Spain</span><span class="asset-fund">GIF</span></li>
+            <li class="asset" data-fund="GIF"><span class="asset-dot" aria-hidden="true"></span><span class="asset-name">Nordic Fibre Network</span><span class="asset-meta">Fibre · Sweden</span><span class="asset-fund">GIF</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="investor-portal" aria-labelledby="portal-title">
+  <div class="container">
+    <div class="section-head section-head-split reveal">
+      <div>
+        <p class="eyebrow eyebrow-dark">The investor experience</p>
+        <h2 id="portal-title">Your whole relationship with us, in one secure place.</h2>
+      </div>
+      <p class="lede">Approved investors get their own InvestorIQ workspace: documents, capital activity, portfolio data and a direct line to the team, with the same figures our own people see.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature reveal">
+        <div class="vignette">
+          <svg viewBox="0 0 320 196" aria-hidden="true" focusable="false">
+            <rect class="v-screen" x=".5" y=".5" width="319" height="195" rx="10"/>
+            <path class="v-bar" d="M10.5.5h299a10 10 0 0 1 10 10V34H.5V10.5a10 10 0 0 1 10-10z"/>
+            <g class="v-ico" transform="translate(14 10)"><rect x="1.5" y="6" width="11" height="8" rx="1.5"/><path d="M4 6V4.2a3 3 0 0 1 6 0V6"/></g>
+            <text class="v-t v-b v-on-dark" x="34" y="21.5">Data room · Australian Infrastructure Fund</text>
+            <rect class="v-chip-teal" x="240" y="44" width="68" height="17" rx="8.5"/>
+            <text class="v-t v-xs v-teal" x="274" y="55.5" text-anchor="middle">91 days left</text>
+            <text class="v-t v-xs v-muted" x="14" y="56">4 documents</text>
+            <g transform="translate(14 70)"><rect class="v-pdf" width="13" height="16" rx="2"/><text class="v-t" x="22" y="9">AIF Information Memorandum</text><text class="v-t v-xs v-muted" x="22" y="20">Key document · PDF</text><text class="v-t v-xs v-link" x="292" y="13" text-anchor="end">View</text></g>
+            <path class="v-rule" d="M14 99.5h292"/>
+            <g transform="translate(14 108)"><rect class="v-pdf" width="13" height="16" rx="2"/><text class="v-t" x="22" y="9">AIF Limited Partnership Agreement</text><text class="v-t v-xs v-muted" x="22" y="20">Governing document · PDF</text><text class="v-t v-xs v-link" x="292" y="13" text-anchor="end">View</text></g>
+            <path class="v-rule" d="M14 137.5h292"/>
+            <g transform="translate(14 146)"><rect class="v-pdf" width="13" height="16" rx="2"/><text class="v-t" x="22" y="9">ESG Policy 2026</text><text class="v-t v-xs v-muted" x="22" y="20">Policy · PDF</text><text class="v-t v-xs v-link" x="292" y="13" text-anchor="end">View</text></g>
+            <path class="v-rule" d="M14 175.5h292"/>
+          </svg>
+        </div>
+        <h3>Secure data rooms</h3>
+        <p>Review information memoranda, governing documents and our ESG policy in a fund data room opened just for you, with access that expires when you're done.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="vignette">
+          <svg viewBox="0 0 320 196" aria-hidden="true" focusable="false">
+            <rect class="v-screen" x=".5" y=".5" width="319" height="195" rx="10"/>
+            <rect class="v-input" x="14" y="14" width="160" height="24" rx="12"/>
+            <g class="v-ico" transform="translate(23 19)"><circle cx="6" cy="6" r="4.2"/><path d="M9.2 9.2l3.3 3.3"/></g>
+            <text class="v-t v-muted" x="42" y="29.5">Search documents</text>
+            <rect class="v-chip" x="184" y="17" width="38" height="18" rx="9"/><text class="v-t v-xs" x="203" y="29" text-anchor="middle">AIF</text>
+            <rect class="v-chip" x="228" y="17" width="44" height="18" rx="9"/><text class="v-t v-xs" x="250" y="29" text-anchor="middle">FY26</text>
+            <rect class="v-chip" x="278" y="17" width="28" height="18" rx="9"/><text class="v-t v-xs" x="292" y="29" text-anchor="middle">+3</text>
+            <g transform="translate(14 54)"><circle class="v-unread" cx="3" cy="7" r="3"/><text class="v-t v-b" x="12" y="10">AIF Quarterly Report Q3 2026</text><rect class="v-chip-new" x="242" y="0" width="34" height="16" rx="8"/><text class="v-t v-xs v-new" x="259" y="11" text-anchor="middle">New</text><text class="v-t v-xs v-muted" x="12" y="22">Reporting · 12 pages</text></g>
+            <path class="v-rule" d="M14 85.5h292"/>
+            <g transform="translate(14 94)"><circle class="v-unread" cx="3" cy="7" r="3"/><text class="v-t v-b" x="12" y="10">Holding Statement Q3 2026</text><rect class="v-chip-new" x="242" y="0" width="34" height="16" rx="8"/><text class="v-t v-xs v-new" x="259" y="11" text-anchor="middle">New</text><text class="v-t v-xs v-muted" x="12" y="22">Statement · your holdings</text></g>
+            <path class="v-rule" d="M14 125.5h292"/>
+            <g transform="translate(14 134)"><text class="v-t" x="12" y="10">FY26 Tax Statement · AIF</text><text class="v-t v-xs v-muted" x="12" y="22">Tax · year ended 30 June 2026</text></g>
+            <path class="v-rule" d="M14 165.5h292"/>
+            <g transform="translate(14 173)"><text class="v-t" x="12" y="10">CPF Distribution Notice</text></g>
+          </svg>
+        </div>
+        <h3>Document centre</h3>
+        <p>Every statement, report and notice in one place, searchable by fund, period and type, with new documents flagged until you've read them.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="vignette">
+          <svg viewBox="0 0 320 196" aria-hidden="true" focusable="false">
+            <rect class="v-screen" x=".5" y=".5" width="319" height="195" rx="10"/>
+            <text class="v-t v-b" x="14" y="26">Action centre</text>
+            <rect class="v-badge" x="88" y="15" width="18" height="15" rx="7.5"/><text class="v-t v-xs v-on-dark" x="97" y="26" text-anchor="middle">2</text>
+            <rect class="v-card" x="14" y="38" width="292" height="144" rx="8"/>
+            <rect class="v-chip-new" x="26" y="50" width="86" height="18" rx="9"/><text class="v-t v-xs v-new" x="69" y="62.5" text-anchor="middle">Action needed</text>
+            <text class="v-t v-xs v-muted" x="294" y="62.5" text-anchor="end">AIF · capital call</text>
+            <text class="v-t v-xl" x="26" y="96">A$6,000,000</text>
+            <text class="v-t v-xs v-muted" x="26" y="113">Due 14 Nov 2026 · 5% of commitment</text>
+            <path class="v-track" d="M34 138h236"/>
+            <path class="v-track-on" d="M34 138h78"/>
+            <circle class="v-step-done" cx="34" cy="138" r="5"/>
+            <circle class="v-step-now" cx="112" cy="138" r="5"/>
+            <circle class="v-step" cx="190" cy="138" r="5"/>
+            <circle class="v-step" cx="268" cy="138" r="5"/>
+            <text class="v-t v-xxs v-muted" x="34" y="155" text-anchor="middle">Notice</text>
+            <text class="v-t v-xxs v-muted" x="112" y="155" text-anchor="middle">Acknowledge</text>
+            <text class="v-t v-xxs v-muted" x="190" y="155" text-anchor="middle">Funds sent</text>
+            <text class="v-t v-xxs v-muted" x="268" y="155" text-anchor="middle">Reconciled</text>
+            <rect class="v-btn" x="208" y="82" width="86" height="26" rx="13"/><text class="v-t v-xs v-b v-on-mint" x="251" y="98.5" text-anchor="middle">Acknowledge</text>
+          </svg>
+        </div>
+        <h3>Capital calls and action centre</h3>
+        <p>Every capital call, distribution and request that needs you, with due dates, amounts and a clear trail from notice to reconciliation.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="vignette">
+          <svg viewBox="0 0 320 196" aria-hidden="true" focusable="false">
+            <rect class="v-screen" x=".5" y=".5" width="319" height="195" rx="10"/>
+            <text class="v-t v-xs v-muted" x="14" y="24">Portfolio value</text>
+            <text class="v-t v-lg" x="14" y="44">A$183.6m</text>
+            <text class="v-t v-xs v-muted" x="120" y="24">Since-inception IRR</text>
+            <text class="v-t v-lg" x="120" y="44">8.3%</text>
+            <text class="v-t v-xs v-muted" x="222" y="24">Unfunded</text>
+            <text class="v-t v-lg" x="222" y="44">A$36.0m</text>
+            <path class="v-rule" d="M14 58.5h292"/>
+            <circle class="v-donut-bg" cx="58" cy="124" r="34"/>
+            <circle class="v-donut-aif" cx="58" cy="124" r="34" pathLength="100" stroke-dasharray="53 47" transform="rotate(-90 58 124)"/>
+            <circle class="v-donut-cpf" cx="58" cy="124" r="34" pathLength="100" stroke-dasharray="47 53" stroke-dashoffset="-53" transform="rotate(-90 58 124)"/>
+            <text class="v-t v-xs v-b" x="58" y="122" text-anchor="middle">2 funds</text>
+            <text class="v-t v-xxs v-muted" x="58" y="134" text-anchor="middle">AIF · CPF</text>
+            <text class="v-t v-xs v-muted" x="120" y="78">Look-through exposure by sector</text>
+            <g class="v-bars">
+              <text class="v-t v-xxs" x="120" y="96">Office</text><rect class="v-bar-bg" x="170" y="89" width="110" height="8" rx="4"/><rect class="v-bar-cpf" x="170" y="89" width="66" height="8" rx="4"/><text class="v-t v-xxs v-muted" x="306" y="96" text-anchor="end">30%</text>
+              <text class="v-t v-xxs" x="120" y="114">Transport</text><rect class="v-bar-bg" x="170" y="107" width="110" height="8" rx="4"/><rect class="v-bar-aif" x="170" y="107" width="65" height="8" rx="4"/><text class="v-t v-xxs v-muted" x="306" y="114" text-anchor="end">30%</text>
+              <text class="v-t v-xxs" x="120" y="132">Utilities</text><rect class="v-bar-bg" x="170" y="125" width="110" height="8" rx="4"/><rect class="v-bar-aif" x="170" y="125" width="21" height="8" rx="4"/><text class="v-t v-xxs v-muted" x="306" y="132" text-anchor="end">10%</text>
+              <text class="v-t v-xxs" x="120" y="150">Logistics</text><rect class="v-bar-bg" x="170" y="143" width="110" height="8" rx="4"/><rect class="v-bar-cpf" x="170" y="143" width="20" height="8" rx="4"/><text class="v-t v-xxs v-muted" x="306" y="150" text-anchor="end">9%</text>
+              <text class="v-t v-xxs" x="120" y="168">Energy</text><rect class="v-bar-bg" x="170" y="161" width="110" height="8" rx="4"/><rect class="v-bar-aif" x="170" y="161" width="18" height="8" rx="4"/><text class="v-t v-xxs v-muted" x="306" y="168" text-anchor="end">8%</text>
+            </g>
+          </svg>
+        </div>
+        <h3>Portfolio and look-through exposure</h3>
+        <p>Commitments, funded and unfunded capital, NAV trend and IRR, with look-through exposure by asset, sector and state across every fund you hold.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="vignette">
+          <svg viewBox="0 0 320 196" aria-hidden="true" focusable="false">
+            <rect class="v-screen" x=".5" y=".5" width="319" height="195" rx="10"/>
+            <text class="v-t v-b" x="14" y="26">My queries</text>
+            <text class="v-t v-xs v-link" x="306" y="26" text-anchor="end">Ask a question</text>
+            <rect class="v-card" x="14" y="38" width="292" height="94" rx="8"/>
+            <text class="v-t v-b" x="26" y="58">Draft NAV for AIF</text>
+            <rect class="v-chip-ok" x="236" y="46" width="58" height="17" rx="8.5"/><text class="v-t v-xs v-ok" x="265" y="58" text-anchor="middle">Resolved</text>
+            <text class="v-t v-xs v-muted" x="26" y="74">Raised 9:14 am · answered 11:02 am</text>
+            <path class="v-quote" d="M26 84v38"/>
+            <text class="v-t v-xs" x="34" y="95">Dear David, the draft NAV for AIF at</text>
+            <text class="v-t v-xs" x="34" y="108">30 September is A$4.49bn, up 2.1% on</text>
+            <text class="v-t v-xs" x="34" y="121">the prior quarter.</text>
+            <rect class="v-card" x="14" y="142" width="292" height="40" rx="8"/>
+            <text class="v-t v-b" x="26" y="160">Add an authorised signatory</text>
+            <text class="v-t v-xs v-muted" x="26" y="173">Same-day response target</text>
+            <rect class="v-chip-info" x="226" y="152" width="68" height="17" rx="8.5"/><text class="v-t v-xs v-info" x="260" y="164" text-anchor="middle">In progress</text>
+          </svg>
+        </div>
+        <h3>Queries answered the same day</h3>
+        <p>Ask a question from the portal and follow it to resolution. Simple requests are answered straight away; others the same business day, within your agreed service levels.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="vignette">
+          <svg viewBox="0 0 320 196" aria-hidden="true" focusable="false">
+            <rect class="v-screen" x=".5" y=".5" width="319" height="195" rx="10"/>
+            <g class="v-spark" transform="translate(14 12)"><path d="M8 1.5l1.6 4.6L14 7.7l-4.4 1.6L8 14l-1.6-4.7L2 7.7l4.4-1.6z"/></g>
+            <text class="v-t v-b" x="34" y="24">InvestorIQ assistant</text>
+            <text class="v-t v-xxs v-muted" x="306" y="24" text-anchor="end">Answers from your records</text>
+            <rect class="v-bubble-me" x="124" y="38" width="182" height="24" rx="12"/>
+            <text class="v-t v-xs v-on-dark" x="215" y="54" text-anchor="middle">How did AIF do last financial year?</text>
+            <rect class="v-bubble" x="14" y="72" width="232" height="58" rx="12"/>
+            <text class="v-t v-xs" x="26" y="90">AIF returned 10.3% net in FY26, ahead</text>
+            <text class="v-t v-xs" x="26" y="103">of its 9% target. Your holding was</text>
+            <text class="v-t v-xs" x="26" y="116">valued at A$97.5m on 30 September.</text>
+            <rect class="v-cite" x="14" y="138" width="128" height="17" rx="4"/><text class="v-t v-xxs v-teal" x="22" y="149.5">AIF Quarterly Report Q3 2026</text>
+            <rect class="v-cite" x="148" y="138" width="92" height="17" rx="4"/><text class="v-t v-xxs v-teal" x="156" y="149.5">Your holding statement</text>
+            <rect class="v-input" x="14" y="164" width="292" height="22" rx="11"/>
+            <text class="v-t v-xs v-muted" x="26" y="178.5">Ask about your investments</text>
+            <circle class="v-send" cx="295" cy="175" r="8"/>
+          </svg>
+        </div>
+        <h3>An AI assistant grounded on your own records</h3>
+        <p>Ask in plain English and get answers drawn only from your holdings and documents, with citations you can open. Never from another investor's data.</p>
+      </article>
+    </div>
+    <div class="portal-cta reveal">
+      <p>Already an investor? Log in to your workspace. New to InvestorIQ? Request access and your relationship manager will open a data room for you.</p>
+      <div class="portal-cta-actions">
+        <a class="btn btn-mint" href="#request-access" data-scroll-form>Request portal access</a>
+        <a class="btn btn-outline-light" href="https://miet3.my.site.com/investors/login" rel="noopener">Investor login</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="responsible-investment" aria-labelledby="ri-title">
+  <div class="container ri-layout">
+    <div class="ri-copy reveal">
+      <p class="eyebrow">Responsible investment</p>
+      <h2 id="ri-title">Responsible ownership is how we protect long-term value.</h2>
+      <p class="lede">Environmental, social and governance factors shape every investment decision, every asset plan and every report we send.</p>
+      <ul class="ri-pillars">
+        <li>
+          <span class="ri-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></svg></span>
+          <div><h3>Integrate</h3><p>ESG risks and opportunities are assessed before every investment. We exclude thermal coal mining and coal-fired power, controversial weapons and tobacco production.</p></div>
+        </li>
+        <li>
+          <span class="ri-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div><h3>Steward</h3><p>We hold board seats on most portfolio companies and use them to drive safety, workforce and governance outcomes. Modern slavery risks are assessed for every new supplier.</p></div>
+        </li>
+        <li>
+          <span class="ri-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 17v-3M12 17v-6M15 17v-4"/></svg></span>
+          <div><h3>Report</h3><p>Every fund reports Scope 1 and 2 emissions annually. Investors receive an annual ESG report in the portal, aligned with the ISSB climate disclosure standards.</p></div>
+        </li>
+      </ul>
+    </div>
+    <aside class="ri-panel reveal" aria-labelledby="ri-panel-title">
+      <h3 id="ri-panel-title">Our climate commitments</h3>
+      <dl class="ri-figures">
+        <div><dt>Reduction in emissions intensity by 2030, against a 2020 baseline</dt><dd>40%</dd></div>
+        <div><dt>Net zero target across every fund</dt><dd>2050</dd></div>
+        <div><dt>Funds reporting Scope 1 and 2 emissions annually</dt><dd>4 of 4</dd></div>
+        <div><dt>Sector exclusions applied to every fund</dt><dd>3</dd></div>
+      </dl>
+      <p class="ri-note">From the InvestorIQ ESG Policy 2026, approved by the Investment Committee in March 2026. The full policy is in every data room. Illustrative demonstration content.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-subtle" id="insights" aria-labelledby="insights-title">
+  <div class="container">
+    <div class="section-head section-head-split reveal">
+      <div>
+        <p class="eyebrow">Insights</p>
+        <h2 id="insights-title">Views from our investment teams.</h2>
+      </div>
+      <p class="lede">Research, market updates and asset stories. Full videos and articles are published in the investor portal.</p>
+    </div>
+    <div class="insight-grid">
+      <article class="insight-card reveal">
+        <div class="insight-art art-road">
+          <svg viewBox="0 0 400 225" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="225" class="art-bg"/>
+            <circle cx="292" cy="72" r="30" class="art-sun"/>
+            <path class="art-hill" d="M0 150q90-34 190-12t210-14v101H0z"/>
+            <path class="art-fine" d="M0 120q100-30 200-6t200-18M0 98q100-30 200-6t200-18"/>
+            <path class="art-road" d="M110 225c56-34 92-62 104-90M330 225c-56-34-92-62-104-90"/>
+            <path class="art-dash" d="M220 225c-2-30-3-60-3-90"/>
+            <path class="art-fine" d="M150 175h14v-26M290 175h-14v-26"/>
+          </svg>
+          <span class="insight-kind"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg>Video · 4 min watch</span>
+        </div>
+        <div class="insight-body">
+          <p class="insight-meta"><time datetime="2026-10-29">29 Oct 2026</time> · Infrastructure team</p>
+          <h3>Why essential infrastructure holds its value when rates rise</h3>
+          <p>Toll roads, airports and utilities link revenue to inflation. Our infrastructure team explains what that means for long-term investors.</p>
+          <a class="text-link" href="https://miet3.my.site.com/investors/login" rel="noopener">Watch in the investor portal <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="insight-card reveal">
+        <div class="insight-art art-wind">
+          <svg viewBox="0 0 400 225" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="225" class="art-bg"/>
+            <path class="art-hill" d="M0 170q70-40 150-20t140-6q60-14 110 4v77H0z"/>
+            <path class="art-fine" d="M0 196q120-24 220-4t180-8"/>
+            <g class="art-turbine"><path d="M128 158l2-96h2l2 96"/><path d="M131 60c3-12 2-28 0-38-2 10-3 26 0 38zM131 60c-10 7-24 15-34 19 11-1 26-8 34-19zM131 60c9 8 22 18 32 22-8-8-21-17-32-22z"/></g>
+            <g class="art-turbine"><path d="M246 152l1.6-74h1.6l1.6 74"/><path d="M248.4 76c2.4-9 1.6-21 0-29-1.6 8-2.4 20 0 29zM248.4 76c-8 5-18 11-26 14 9-1 20-6 26-14zM248.4 76c7 6 17 14 25 17-6-6-16-13-25-17z"/></g>
+            <g class="art-turbine art-turbine-far"><path d="M330 160l1.2-52h1.2l1.2 52"/><path d="M331.8 107c1.8-7 1.2-16 0-22-1.2 6-1.8 15 0 22zM331.8 107c-6 4-14 8-20 10 7-1 15-4 20-10zM331.8 107c5 5 13 10 19 12-4-5-12-10-19-12z"/></g>
+          </svg>
+          <span class="insight-kind"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg>Video · 3 min watch</span>
+        </div>
+        <div class="insight-body">
+          <p class="insight-meta"><time datetime="2026-10-15">15 Oct 2026</time> · Asset management</p>
+          <h3>Inside the Western Plains wind portfolio</h3>
+          <p>A look at how one of the Australian Infrastructure Fund's energy assets is run, from turbine maintenance to grid connection.</p>
+          <a class="text-link" href="https://miet3.my.site.com/investors/login" rel="noopener">Watch in the investor portal <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="insight-card reveal">
+        <div class="insight-art art-city">
+          <svg viewBox="0 0 400 225" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="225" class="art-bg"/>
+            <circle cx="96" cy="70" r="24" class="art-sun"/>
+            <path class="art-line" d="M30 190V128h34v62M64 190V92l22-14 22 14v98M108 190v-76h40v76M148 190V60h30v130M178 190v-92h44v92M222 190v-54h28v54M250 190V84l18-10 18 10v106M286 190v-66h38v66M324 190v-40h40v40"/>
+            <path class="art-fine" d="M156 72h14M156 84h14M156 96h14M156 108h14M156 120h14M156 132h14M156 144h14M156 156h14M156 168h14M186 110h28M186 124h28M186 138h28M186 152h28M186 166h28M258 96v86M266 96v86M274 96v86"/>
+            <path class="art-crane" d="M338 150V40M326 40h60M338 40l18-14v14M380 40v26"/>
+            <path class="art-ground" d="M0 190h400"/>
+          </svg>
+          <span class="insight-kind"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/></svg>Article · 6 min read</span>
+        </div>
+        <div class="insight-body">
+          <p class="insight-meta"><time datetime="2026-10-03">3 Oct 2026</time> · Property research</p>
+          <h3>Australian property: Q3 2026 market update</h3>
+          <p>Office, logistics and retail trends across the five markets the Core Property Fund invests in, and what they mean for income.</p>
+          <a class="text-link" href="https://miet3.my.site.com/investors/login" rel="noopener">Read in the investor portal <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="container about-layout">
+    <div class="about-copy reveal">
+      <p class="eyebrow">About InvestorIQ</p>
+      <h2 id="about-title">A specialist manager, built around the investors we serve.</h2>
+      <p class="lede">InvestorIQ is a Sydney-based manager of infrastructure and real assets. We look after four funds for institutional and wholesale investors in Australia and overseas, and we report to every one of them through the same secure portal.</p>
+      <h3 class="about-sub">Who we work with</h3>
+      <ul class="clients">
+        <li>Superannuation funds</li>
+        <li>Pension funds</li>
+        <li>Insurers</li>
+        <li>Sovereign wealth funds</li>
+        <li>Endowments and foundations</li>
+        <li>Family offices</li>
+      </ul>
+    </div>
+    <div class="team reveal">
+      <h3 class="about-sub">Your first points of contact</h3>
+      <article class="person">
+        <span class="avatar" aria-hidden="true">AC</span>
+        <div>
+          <h4>Alex Chen</h4>
+          <p class="person-role">Relationship Manager, Institutional</p>
+          <p>Your first conversation and your data room. Alex reviews new access requests, opens fund data rooms and guides you from first look to commitment.</p>
+        </div>
+      </article>
+      <article class="person">
+        <span class="avatar avatar-soft" aria-hidden="true">SJ</span>
+        <div>
+          <h4>Sarah Jones</h4>
+          <p class="person-role">Global Client Services</p>
+          <p>Looks after investors once they're on board: capital activity, reporting, delegated access and the questions that come with them.</p>
+        </div>
+      </article>
+      <a class="btn btn-secondary" href="#request-access" data-scroll-form>Talk to our team</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-subtle section-form" id="request-access" aria-labelledby="form-title">
+  <div class="container">
+    <div class="access-card">
+      <div class="access-intro">
+        <svg class="access-texture" aria-hidden="true" focusable="false"></svg>
+        <div class="access-intro-in">
+          <p class="eyebrow eyebrow-dark">Request portal access</p>
+          <h2 id="form-title" tabindex="-1">Open a data room and see the detail for yourself.</h2>
+          <p>Your relationship manager reviews your request, usually within one business day. Once approved you'll receive an email from InvestorIQ to set your own password. We never send passwords or ask for bank details by email.</p>
+          <ol class="steps">
+            <li><span class="step-num" aria-hidden="true">1</span><div><b>Tell us about your organisation</b><span>It takes about two minutes. Choose the funds you'd like to review.</span></div></li>
+            <li><span class="step-num" aria-hidden="true">2</span><div><b>We review your request</b><span>Your relationship manager checks your details, usually within one business day.</span></div></li>
+            <li><span class="step-num" aria-hidden="true">3</span><div><b>Set your own password</b><span>You receive an email from InvestorIQ with a secure link, then your data rooms are ready.</span></div></li>
+          </ol>
+          <p class="security-note">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            <span>For wholesale and institutional investors only. Your details go straight to InvestorIQ and are never shared with third parties.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="access-form-wrap">
+        <form class="access-form" id="access-form" method="post" novalidate aria-describedby="form-required-note">
+          <p class="form-required" id="form-required-note">Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-first">First name <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-first" name="firstName" type="text" autocomplete="given-name" maxlength="40" required aria-describedby="f-first-err">
+              <p class="field-error" id="f-first-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-last">Last name <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-last" name="lastName" type="text" autocomplete="family-name" maxlength="80" required aria-describedby="f-last-err">
+              <p class="field-error" id="f-last-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Work email <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="80" required aria-describedby="f-email-err f-email-hint">
+              <p class="field-hint" id="f-email-hint" hidden></p>
+              <p class="field-error" id="f-email-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" aria-describedby="f-phone-err">
+              <p class="field-error" id="f-phone-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-title">Job title <span class="opt">(optional)</span></label>
+              <input id="f-title" name="title" type="text" autocomplete="organization-title" maxlength="128">
+            </div>
+            <div class="field">
+              <label for="f-org">Organisation <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-org" name="organisation" type="text" autocomplete="organization" maxlength="255" required aria-describedby="f-org-err">
+              <p class="field-error" id="f-org-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-type">Investor type <span class="req" aria-hidden="true">*</span></label>
+              <select id="f-type" name="investorType" required aria-describedby="f-type-err">
+                <option value="">Select investor type</option>
+                <option value="Superannuation fund">Superannuation fund</option>
+                <option value="Pension fund">Pension fund</option>
+                <option value="Insurance company">Insurance company</option>
+                <option value="Sovereign wealth fund">Sovereign wealth fund</option>
+                <option value="Endowment or foundation">Endowment or foundation</option>
+                <option value="Family office">Family office</option>
+                <option value="Fund of funds">Fund of funds</option>
+                <option value="Other">Other</option>
+              </select>
+              <p class="field-error" id="f-type-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-country">Country</label>
+              <select id="f-country" name="country" autocomplete="country-name">
+                <option value="Australia" selected>Australia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Singapore">Singapore</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset class="field fund-fieldset" id="f-funds" aria-describedby="f-funds-err">
+            <legend>Funds you'd like to review <span class="req" aria-hidden="true">*</span></legend>
+            <div class="fund-options">
+              <label class="fund-option" for="f-fund-aif">
+                <input type="checkbox" id="f-fund-aif" name="fundInterests" value="AIF">
+                <span class="fund-swatch swatch-aif" aria-hidden="true"></span>
+                <span class="fund-option-text"><b>Australian Infrastructure Fund</b><small>AIF · Open</small></span>
+              </label>
+              <label class="fund-option" for="f-fund-cpf">
+                <input type="checkbox" id="f-fund-cpf" name="fundInterests" value="CPF">
+                <span class="fund-swatch swatch-cpf" aria-hidden="true"></span>
+                <span class="fund-option-text"><b>Core Property Fund</b><small>CPF · Open</small></span>
+              </label>
+              <label class="fund-option" for="f-fund-gif">
+                <input type="checkbox" id="f-fund-gif" name="fundInterests" value="GIF">
+                <span class="fund-swatch swatch-gif" aria-hidden="true"></span>
+                <span class="fund-option-text"><b>Global Infrastructure Fund</b><small>GIF · Open</small></span>
+              </label>
+              <label class="fund-option" for="f-fund-gif2">
+                <input type="checkbox" id="f-fund-gif2" name="fundInterests" value="GIF2">
+                <span class="fund-swatch swatch-gif2" aria-hidden="true"></span>
+                <span class="fund-option-text"><b>Global Infrastructure Fund II</b><small>GIF II · Pre-launch, by invitation</small></span>
+              </label>
+            </div>
+            <p class="field-error" id="f-funds-err" hidden></p>
+          </fieldset>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-range">Expected commitment <span class="opt">(optional)</span></label>
+              <select id="f-range" name="commitmentRange">
+                <option value="">Prefer not to say</option>
+                <option value="Under A$25m">Under A$25m</option>
+                <option value="A$25m to A$100m">A$25m to A$100m</option>
+                <option value="A$100m to A$250m">A$100m to A$250m</option>
+                <option value="Over A$250m">Over A$250m</option>
+              </select>
+            </div>
+            <div class="field field-full">
+              <label for="f-message">Anything we should know? <span class="opt">(optional)</span></label>
+              <textarea id="f-message" name="message" rows="4" maxlength="2000"></textarea>
+            </div>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label for="f-website">Website</label>
+            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="consents">
+            <div class="check">
+              <input type="checkbox" id="f-wholesale" name="wholesaleConfirmed" required aria-describedby="f-wholesale-err">
+              <label for="f-wholesale">I confirm my organisation is a wholesale or institutional investor <span class="req" aria-hidden="true">*</span></label>
+              <p class="field-error" id="f-wholesale-err" hidden></p>
+            </div>
+            <div class="check">
+              <input type="checkbox" id="f-privacy" name="privacyConsent" required aria-describedby="f-privacy-err">
+              <label for="f-privacy">I agree that InvestorIQ may contact me about this request (<a href="#privacy">privacy notice</a>) <span class="req" aria-hidden="true">*</span></label>
+              <p class="field-error" id="f-privacy-err" hidden></p>
+            </div>
+          </div>
+
+          <div class="form-alert" id="form-alert" role="alert" hidden>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></svg>
+            <div>
+              <p class="form-alert-title" id="form-alert-title">We couldn't send your request</p>
+              <p id="form-alert-text"></p>
+              <button type="button" class="text-link form-retry" id="form-retry" hidden>Try again</button>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button class="btn btn-primary btn-lg" type="submit" id="form-submit">
+              <span class="btn-spinner" aria-hidden="true"></span>
+              <span class="btn-label">Request access</span>
+            </button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </div>
+          <noscript><p class="noscript">This form needs JavaScript. Please enable it, or ask your InvestorIQ relationship manager to send you an invitation.</p></noscript>
+        </form>
+
+        <div class="form-success" id="form-success" hidden>
+          <span class="success-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3 id="success-title" tabindex="-1">Thank you. Your request is with us.</h3>
+          <p class="success-ref">Your reference <strong id="success-ref">IIQ-000000</strong></p>
+          <p id="success-message"></p>
+          <ul class="success-next">
+            <li>Your relationship manager reviews your request, usually within one business day.</li>
+            <li>Once approved, you'll receive an email from InvestorIQ to set your own password.</li>
+            <li>We never send passwords or ask for bank details by email.</li>
+          </ul>
+          <button type="button" class="btn btn-secondary" id="form-again">Submit another request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="#top" aria-label="InvestorIQ home">
+          <svg class="mark" width="30" height="30" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect class="mark-bg" width="28" height="28" rx="7"/><path class="mark-roof" d="M8 15.5l6-5.5 6 5.5"/><path class="mark-line" d="M7.5 20.5h13"/></svg>
+          <span class="wordmark">Investor<b>IQ</b></span>
+        </a>
+        <p>Infrastructure and real assets for long-term institutional investors.</p>
+        <address>Level 30, Sydney NSW 2000<br>Australia</address>
+        <span class="demo-badge">Demo prototype</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div>
+          <h2>Funds</h2>
+          <ul>
+            <li><a href="#fund-aif">Australian Infrastructure Fund</a></li>
+            <li><a href="#fund-cpf">Core Property Fund</a></li>
+            <li><a href="#fund-gif">Global Infrastructure Fund</a></li>
+            <li><a href="#fund-gif2">Global Infrastructure Fund II</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <ul>
+            <li><a href="#strategies">Strategies</a></li>
+            <li><a href="#responsible-investment">Responsible investment</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Investors</h2>
+          <ul>
+            <li><a href="https://miet3.my.site.com/investors/login" rel="noopener">Investor login</a></li>
+            <li><a href="#request-access" data-scroll-form>Request access</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <div class="privacy" id="privacy" tabindex="-1">
+        <h2>Privacy notice</h2>
+        <p>We use the details you submit only to respond to your request and to manage your relationship with InvestorIQ. They are stored in our customer relationship system, are never sold, and are never shared for marketing. This site sets no cookies and uses no analytics or trackers; fonts are loaded from Google Fonts.</p>
+      </div>
+      <div class="disclaimer">
+        <h2>Important information</h2>
+        <p>InvestorIQ is a fictional brand created for a Salesforce demonstration. Figures are illustrative. This website is not an offer of financial products and is intended for wholesale and institutional investors only.</p>
+        <p>Demo prototype. Fund names, assets, people and figures are invented for demonstration and do not describe any real fund or person. Fund administrator names are part of the demonstration data and do not imply any real relationship.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> InvestorIQ (fictional). Demo prototype.</p>
+      <a href="#top" class="to-top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
