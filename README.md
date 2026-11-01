@@ -1,6 +1,6 @@
 # InvestorIQ: public website (demo)
 
-The public marketing website of InvestorIQ, an Australian manager of infrastructure and real assets, used in the InvestorIQ Salesforce demo. It is the public face of the InvestorIQ investor portal (Experience Cloud site `investors`).
+The public marketing website of InvestorIQ, a fictional manager of infrastructure and real assets, used in the InvestorIQ Salesforce demo. It is the public face of the InvestorIQ investor portal (Experience Cloud site `investors`).
 
 Live: https://ankitsirohi505.github.io/investoriq/
 
@@ -10,10 +10,10 @@ Demo prototype. InvestorIQ is a fictional brand. Funds, assets, people and figur
 
 One page with a sticky header and anchored sections:
 
-- **Hero**: headline, calls to action and illustrative key figures (A$14.2bn funds under management, 14 assets, 120+ investors, since 2017).
-- **Strategies**: Australian infrastructure, core property, global infrastructure.
-- **Funds**: Australian Infrastructure Fund (AIF), Core Property Fund (CPF), Global Infrastructure Fund (GIF) and Global Infrastructure Fund II (GIF2, pre-launch, by invitation). Draft NAV, target net IRR and the other facts match the demo data in the org (`IIQ_DemoData`, `IIQ_DemoAlign`, `IIQ_DemoStory.seedMetrics`). **Request data room access** on a card ticks that fund in the form.
-- **Portfolio highlights**: map of the Australian assets with a filter by fund, plus GIF's offshore assets.
+- **Hero**: headline, calls to action and illustrative key figures ($14.2bn funds under management, 14 assets, 120+ investors, since 2017). Amounts are shown in the base currency, without a country prefix.
+- **Strategies**: core infrastructure, core property, global infrastructure.
+- **Funds**: Anchor Infrastructure Fund (AIF), Core Property Fund (CPF), Global Infrastructure Fund (GIF) and Global Infrastructure Fund II (GIF2, pre-launch, by invitation). Draft NAV, target net IRR and the other facts match the demo data in the org (`IIQ_DemoData`, `IIQ_DemoAlign`, `IIQ_DemoStory.seedMetrics`). **Request data room access** on a card ticks that fund in the form.
+- **Portfolio highlights**: a stylised map of the AIF and CPF assets across five fictional regions (North, East, South, West and Central) with a filter by fund, plus GIF's international assets.
 - **The investor experience**: what the portal gives investors (data rooms, document centre, capital calls, portfolio, queries, AI assistant).
 - **Responsible investment**, **Insights** (the three `IIQ_Insight__c` items), **About** (Alex Chen and Sarah Jones).
 - **Request portal access** form and the footer with the privacy notice and disclaimer.
@@ -37,11 +37,11 @@ Body:
 | --- | --- |
 | `firstName`, `lastName`, `email`, `organisation` | required |
 | `phone`, `title`, `message` | optional, empty string when blank |
-| `investorType` | `Superannuation fund`, `Pension fund`, `Insurance company`, `Sovereign wealth fund`, `Endowment or foundation`, `Family office`, `Fund of funds` or `Other` |
-| `country` | `Australia` (default), `New Zealand`, `Singapore`, `United Kingdom`, `United States` or `Other` |
+| `investorType` | `Pension fund`, `Insurance company`, `Sovereign wealth fund`, `Endowment or foundation`, `Family office`, `Fund of funds` or `Other` |
+| `country` | `Australia`, `India`, `New Zealand`, `Singapore`, `United Arab Emirates`, `United Kingdom`, `United States`, `Other`, or empty when no country is chosen |
 | `fundInterests` | array of fund codes, at least one of `AIF`, `CPF`, `GIF`, `GIF2` |
-| `commitmentRange` | `Under A$25m`, `A$25m to A$100m`, `A$100m to A$250m`, `Over A$250m`, or empty |
-| `wholesaleConfirmed`, `privacyConsent` | `true` (both must be ticked) |
+| `commitmentRange` | `Under 25m`, `25m to 100m`, `100m to 250m`, `Over 250m`, or empty (the visible labels add a `$`) |
+| `wholesaleConfirmed`, `privacyConsent` | `true` (both must be ticked); `wholesaleConfirmed` carries the professional or institutional investor confirmation, and the key name is kept for the Salesforce API |
 | `website` | honeypot: a hidden field people leave empty; its value is sent as is |
 | `source` | `investoriq-site` |
 

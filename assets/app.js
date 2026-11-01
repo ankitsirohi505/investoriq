@@ -7,11 +7,11 @@
     source: 'investoriq-site',
     fundCodes: ['AIF', 'CPF', 'GIF', 'GIF2'],
     blockPersonalEmail: false,
-    personalEmailDomains: ['gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.com.au', 'hotmail.com', 'outlook.com', 'live.com', 'msn.com', 'icloud.com', 'me.com', 'aol.com', 'proton.me', 'protonmail.com', 'gmx.com', 'bigpond.com', 'optusnet.com.au']
+    personalEmailDomains: ['gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.co.uk', 'yahoo.co.in', 'yahoo.com.au', 'hotmail.com', 'hotmail.co.uk', 'outlook.com', 'live.com', 'msn.com', 'icloud.com', 'me.com', 'aol.com', 'proton.me', 'protonmail.com', 'gmx.com', 'rediffmail.com', 'bigpond.com', 'optusnet.com.au']
   };
 
   var FUND_NAMES = {
-    AIF: 'Australian Infrastructure Fund',
+    AIF: 'Anchor Infrastructure Fund',
     CPF: 'Core Property Fund',
     GIF: 'Global Infrastructure Fund',
     GIF2: 'Global Infrastructure Fund II'
@@ -214,7 +214,7 @@
       { id: 'f-org', err: 'f-org-err', check: function () { return val('f-org') ? '' : 'Enter the name of your organisation.'; } },
       { id: 'f-type', err: 'f-type-err', check: function () { return val('f-type') ? '' : 'Select your investor type.'; } },
       { id: 'f-funds', err: 'f-funds-err', group: true, check: function () { return selectedFunds().length ? '' : 'Select at least one fund.'; } },
-      { id: 'f-wholesale', err: 'f-wholesale-err', check: function () { return checked('f-wholesale') ? '' : 'Please confirm your organisation is a wholesale or institutional investor.'; } },
+      { id: 'f-professional', err: 'f-professional-err', check: function () { return checked('f-professional') ? '' : 'Please confirm your organisation is a professional or institutional investor.'; } },
       { id: 'f-privacy', err: 'f-privacy-err', check: function () { return checked('f-privacy') ? '' : 'Please agree so we can contact you about this request.'; } }
     ];
 
@@ -384,11 +384,11 @@
         title: val('f-title'),
         organisation: val('f-org'),
         investorType: val('f-type'),
-        country: val('f-country') || 'Australia',
+        country: val('f-country'),
         fundInterests: selectedFunds(),
         commitmentRange: val('f-range'),
         message: val('f-message'),
-        wholesaleConfirmed: checked('f-wholesale'),
+        wholesaleConfirmed: checked('f-professional'),
         privacyConsent: checked('f-privacy'),
         website: honeypot ? honeypot.value : '',
         source: CONFIG.source
