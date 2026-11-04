@@ -215,7 +215,7 @@
       { id: 'f-type', err: 'f-type-err', check: function () { return val('f-type') ? '' : 'Select your investor type.'; } },
       { id: 'f-funds', err: 'f-funds-err', group: true, check: function () { return selectedFunds().length ? '' : 'Select at least one fund.'; } },
       { id: 'f-professional', err: 'f-professional-err', check: function () { return checked('f-professional') ? '' : 'Please confirm your organisation is a professional or institutional investor.'; } },
-      { id: 'f-privacy', err: 'f-privacy-err', check: function () { return checked('f-privacy') ? '' : 'Please agree so we can contact you about this request.'; } }
+      { id: 'f-privacy', err: 'f-privacy-err', check: function () { return checked('f-privacy') ? '' : 'Please agree so we can contact you about this enquiry.'; } }
     ];
 
     function setError(field, message) {
@@ -292,7 +292,7 @@
       emailEl.addEventListener('blur', function () {
         var v = emailEl.value.trim();
         var show = !CONFIG.blockPersonalEmail && EMAIL_RE.test(v) && isPersonal(v);
-        emailHint.textContent = show ? 'This looks like a personal address. A work email helps us match your request to your organisation.' : '';
+        emailHint.textContent = show ? 'This looks like a personal address. A work email helps us match your enquiry to your organisation.' : '';
         emailHint.hidden = !show;
       });
     }
@@ -337,13 +337,13 @@
       submitBtn.disabled = on;
       submitBtn.classList.toggle('is-sending', on);
       form.setAttribute('aria-busy', String(on));
-      if (btnLabel) btnLabel.textContent = on ? 'Sending…' : 'Request access';
-      if (statusEl) statusEl.textContent = on ? 'Sending your request securely…' : '';
+      if (btnLabel) btnLabel.textContent = on ? 'Sending…' : 'Submit enquiry';
+      if (statusEl) statusEl.textContent = on ? 'Sending your enquiry securely…' : '';
     }
 
     function showAlert(kind, text) {
       alertEl.classList.toggle('is-info', kind === 'network');
-      alertTitle.textContent = kind === 'network' ? 'We couldn’t reach InvestorIQ' : 'We couldn’t send your request';
+      alertTitle.textContent = kind === 'network' ? 'We couldn’t reach InvestorIQ' : 'We couldn’t send your enquiry';
       alertText.textContent = text;
       retryBtn.hidden = kind !== 'network';
       alertEl.hidden = false;
@@ -369,9 +369,9 @@
 
     function defaultError(status) {
       if (status >= 500) return 'Something went wrong on our side (error ' + status + '). Please try again in a few minutes.';
-      if (status === 429) return 'We’ve received several requests from this connection. Please wait a minute and try again.';
-      if (status >= 400) return 'We couldn’t accept this request (error ' + status + '). Please check your details and try again.';
-      return 'We couldn’t confirm your request was received. Please try again.';
+      if (status === 429) return 'We’ve received several enquiries from this connection. Please wait a minute and try again.';
+      if (status >= 400) return 'We couldn’t accept this enquiry (error ' + status + '). Please check your details and try again.';
+      return 'We couldn’t confirm your enquiry was received. Please try again.';
     }
 
     function buildPayload() {
@@ -403,7 +403,7 @@
       $('#success-message').textContent = typeof data.message === 'string' && data.message.trim()
         ? data.message.trim()
         : 'Your relationship manager will be in touch shortly.';
-      title.textContent = 'Thank you, ' + payload.firstName + '. Your request is with us.';
+      title.textContent = 'Thank you, ' + payload.firstName + '. Your enquiry is with us.';
       form.hidden = true;
       successEl.hidden = false;
       var card = $('.access-card');
@@ -420,7 +420,7 @@
         finished = true;
         if (ctrl) ctrl.abort();
         setSending(false);
-        showAlert('network', 'The request took too long to reach InvestorIQ. Your details are still here; please try again.');
+        showAlert('network', 'Your enquiry took too long to reach InvestorIQ. Your details are still here; please try again.');
       }, CONFIG.timeoutMs);
 
       fetch(CONFIG.endpoint, {

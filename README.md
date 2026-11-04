@@ -16,11 +16,11 @@ One page with a sticky header and anchored sections:
 - **Portfolio highlights**: a stylised map of the AIF and CPF assets across five fictional regions (North, East, South, West and Central) with a filter by fund, plus GIF's international assets.
 - **The investor experience**: what the portal gives investors (data rooms, document centre, capital calls, portfolio, queries, AI assistant).
 - **Responsible investment**, **Insights** (the three `IIQ_Insight__c` items), **About** (Alex Chen and Sarah Jones).
-- **Request portal access** form and the footer with the privacy notice and disclaimer.
+- **Investor enquiry** form and the footer with the privacy notice and disclaimer.
 
 **Investor login** goes to https://miet3.my.site.com/investors/login.
 
-## How the request-access form works
+## How the investor enquiry form works
 
 `assets/app.js` posts the form, without cookies or a referrer, to the endpoint set in `CONFIG` at the top of the file:
 
