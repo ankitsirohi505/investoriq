@@ -343,7 +343,7 @@
 
     function showAlert(kind, text) {
       alertEl.classList.toggle('is-info', kind === 'network');
-      alertTitle.textContent = kind === 'network' ? 'We couldn’t reach InvestorIQ' : 'We couldn’t send your enquiry';
+      alertTitle.textContent = kind === 'network' ? 'We couldn’t reach NorthBridge Investments' : 'We couldn’t send your enquiry';
       alertText.textContent = text;
       retryBtn.hidden = kind !== 'network';
       alertEl.hidden = false;
@@ -420,7 +420,7 @@
         finished = true;
         if (ctrl) ctrl.abort();
         setSending(false);
-        showAlert('network', 'Your enquiry took too long to reach InvestorIQ. Your details are still here; please try again.');
+        showAlert('network', 'Your enquiry took too long to reach NorthBridge Investments. Your details are still here; please try again.');
       }, CONFIG.timeoutMs);
 
       fetch(CONFIG.endpoint, {

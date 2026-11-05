@@ -192,11 +192,13 @@ section[id], article[id], #privacy { scroll-margin-top: calc(var(--header-h) + 1
 .mark-bg { fill: var(--mark-bg); transition: fill .25s; }
 .mark-roof { fill: none; stroke: var(--mark-fg); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: stroke .25s; }
 .mark-line { fill: none; stroke: var(--mark-line); stroke-width: 2.4; stroke-linecap: round; transition: stroke .25s; }
-.wordmark { font-family: var(--fh); font-weight: 700; font-size: 1.36rem; letter-spacing: -.025em; color: var(--ink); line-height: 1; transition: color .25s; }
+.wordmark { display: inline-block; font-family: var(--fh); font-weight: 700; font-size: 1.36rem; letter-spacing: -.025em; color: var(--ink); line-height: 1; transition: color .25s; }
 .wordmark b { font-weight: 700; color: var(--mint-600); transition: color .25s; }
+.wordmark-sub { display: block; margin-top: 4px; font-family: var(--fb, inherit); font-size: .46em; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-3); transition: color .25s; }
 .brand-light .mark { --mark-bg: #fff; --mark-fg: var(--teal); --mark-line: var(--teal-600); }
 .brand-light .wordmark { color: #fff; }
 .brand-light .wordmark b { color: var(--mint); }
+.brand-light .wordmark-sub { color: rgba(255, 255, 255, .72); }
 
 .site-header {
   position: fixed; inset: 0 0 auto; z-index: 50;
@@ -243,6 +245,7 @@ section[id], article[id], #privacy { scroll-margin-top: calc(var(--header-h) + 1
 .js .site-header.is-top:not(.is-open) .mark { --mark-bg: #fff; --mark-fg: var(--teal); --mark-line: var(--teal-600); }
 .js .site-header.is-top:not(.is-open) .wordmark { color: #fff; }
 .js .site-header.is-top:not(.is-open) .wordmark b { color: var(--mint); }
+.js .site-header.is-top:not(.is-open) .wordmark-sub { color: rgba(255, 255, 255, .72); }
 .js .site-header.is-top:not(.is-open) .primary-nav a,
 .js .site-header.is-top:not(.is-open) .login-link { color: rgba(255, 255, 255, .86); }
 .js .site-header.is-top:not(.is-open) .primary-nav a:hover { color: #fff; background: rgba(255, 255, 255, .08); }
