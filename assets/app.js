@@ -494,9 +494,9 @@
   }
 
   var ASSISTANT = {
-    orgId: '00Df600000TSFkzEAH',
-    deployment: 'NorthBridge_Website_Assistant',
-    siteUrl: 'https://miet3.my.site.com/ESWNorthBridgeWe1793991834366',
+    orgId: '00Df600000TSFkz',
+    deployment: 'NorthBridge_Website_Chat',
+    siteUrl: 'https://miet3.my.site.com/ESWNorthBridgeWe1793995836595',
     scrtUrl: 'https://miet3.my.salesforce-scrt.com'
   };
 
