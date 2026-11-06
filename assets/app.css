@@ -858,3 +858,26 @@ section[id], article[id], #privacy { scroll-margin-top: calc(var(--header-h) + 1
   .hero { padding-top: 24px; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+.assist-wrap { display: flex; flex-direction: column; gap: var(--s5); justify-content: center; }
+.assist-preview { border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--subtle); overflow: hidden; box-shadow: var(--sh-sm); }
+.assist-head { display: flex; align-items: center; gap: var(--s3); padding: 14px 18px; background: var(--teal); color: #fff; }
+.assist-head b { display: block; font-weight: 600; font-size: var(--fs-sm); }
+.assist-head div span { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); color: #BFE0DD; }
+.assist-avatar { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--mint); color: var(--mint-ink); font-weight: 700; font-size: .8125rem; letter-spacing: .02em; }
+.assist-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 3px rgba(63, 217, 163, .25); }
+.assist-thread { display: flex; flex-direction: column; gap: 10px; padding: 18px; }
+.assist-msg { max-width: 86%; padding: 10px 14px; border-radius: 16px; font-size: var(--fs-sm); line-height: 1.45; }
+.assist-bot { align-self: flex-start; background: #fff; color: var(--ink-2); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+.assist-me { align-self: flex-end; background: var(--teal-600); color: #fff; border-bottom-right-radius: 4px; }
+.assist-actions { display: flex; align-items: center; gap: var(--s4); flex-wrap: wrap; }
+.assist-actions .btn { display: inline-flex; align-items: center; gap: 10px; }
+.assist-icon { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
+.assist-actions .is-sending .assist-icon { display: none; }
+.assist-status { font-size: var(--fs-sm); color: var(--ink-3); }
+.assist-note { font-size: var(--fs-sm); color: var(--ink-3); }
+
+@media (max-width: 560px) {
+  .assist-msg { max-width: 94%; }
+  .assist-actions .btn { width: 100%; justify-content: center; }
+}
