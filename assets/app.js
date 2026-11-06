@@ -136,8 +136,10 @@
   }
 
   function initTexture() {
-    var svg = $('.access-texture');
-    if (!svg) return;
+    $$('.access-texture').forEach(drawTexture);
+  }
+
+  function drawTexture(svg) {
     var ns = 'http://www.w3.org/2000/svg';
     var W = 640, H = 320, seed = 7;
     var cols = ['#3FD9A3', '#0F6A74', '#9BE8C9', '#1E8A7E', '#6FD4B0', '#E8A3B5', '#0C5660', '#F2C7D2'];
@@ -491,6 +493,192 @@
     $('#form-again').addEventListener('click', function () { resetForm(true); });
   }
 
+  function initAskForm() {
+    var form = $('#ask-form');
+    if (!form) return;
+    var submitBtn = $('#ask-submit');
+    var btnLabel = $('.btn-label', submitBtn);
+    var statusEl = $('#ask-status');
+    var alertEl = $('#ask-alert');
+    var alertTitle = $('#ask-alert-title');
+    var alertText = $('#ask-alert-text');
+    var retryBtn = $('#ask-retry');
+    var successEl = $('#ask-success');
+    var sending = false;
+    var attempted = false;
+    var EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/;
+
+    function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+
+    var FIELDS = [
+      { id: 'q-name', err: 'q-name-err', check: function () { return val('q-name') ? '' : 'Enter your name.'; } },
+      { id: 'q-email', err: 'q-email-err', check: function () {
+        var v = val('q-email');
+        if (!v) return 'Enter the email address we hold for you.';
+        return EMAIL_RE.test(v) && v.length <= 80 ? '' : 'Enter a valid email address, like name@organisation.com.';
+      } },
+      { id: 'q-message', err: 'q-message-err', check: function () { return val('q-message').length >= 10 ? '' : 'Write your question (at least a short sentence).'; } },
+      { id: 'q-privacy', err: 'q-privacy-err', check: function () { var el = document.getElementById('q-privacy'); return el && el.checked ? '' : 'Please agree so we can answer your question.'; } }
+    ];
+
+    function setError(field, message) {
+      var el = document.getElementById(field.id);
+      var errEl = document.getElementById(field.err);
+      if (!el || !errEl) return;
+      errEl.textContent = message || '';
+      errEl.hidden = !message;
+      if (message) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+    }
+
+    function validateAll() {
+      var first = null;
+      FIELDS.forEach(function (f) {
+        var m = f.check();
+        setError(f, m);
+        if (m && !first) first = document.getElementById(f.id);
+      });
+      return first;
+    }
+
+    FIELDS.forEach(function (f) {
+      var el = document.getElementById(f.id);
+      if (!el) return;
+      el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function () { if (attempted) setError(f, f.check()); });
+    });
+
+    function setSending(on) {
+      sending = on;
+      submitBtn.disabled = on;
+      submitBtn.classList.toggle('is-sending', on);
+      form.setAttribute('aria-busy', String(on));
+      if (btnLabel) btnLabel.textContent = on ? 'Sending…' : 'Send question';
+      if (statusEl) statusEl.textContent = on ? 'Sending your question securely…' : '';
+    }
+
+    function showAlert(kind, text) {
+      alertEl.classList.toggle('is-info', kind === 'network');
+      alertTitle.textContent = kind === 'network' ? 'We couldn’t reach NorthBridge Investments' : 'We couldn’t send your question';
+      alertText.textContent = text;
+      retryBtn.hidden = kind !== 'network';
+      alertEl.hidden = false;
+    }
+
+    function hideAlert() { alertEl.hidden = true; alertText.textContent = ''; }
+
+    function parseJson(text) {
+      if (!text) return null;
+      try {
+        var data = JSON.parse(text);
+        if (typeof data === 'string') { try { data = JSON.parse(data); } catch (e) { return null; } }
+        return data;
+      } catch (e) { return null; }
+    }
+
+    function payload() {
+      var hp = document.getElementById('q-website');
+      return {
+        kind: 'query',
+        name: val('q-name'),
+        email: val('q-email'),
+        organisation: val('q-org'),
+        subject: val('q-subject'),
+        message: val('q-message'),
+        privacyConsent: !!(document.getElementById('q-privacy') || {}).checked,
+        website: hp ? hp.value : '',
+        source: CONFIG.source
+      };
+    }
+
+    function showSuccess(data, p) {
+      var ref = typeof data.reference === 'string' ? data.reference.trim() : '';
+      var title = $('#ask-success-title');
+      $('#ask-success-ref').textContent = ref;
+      $('.success-ref', successEl).hidden = !ref;
+      $('#ask-success-message').textContent = typeof data.message === 'string' && data.message.trim() ? data.message.trim() : 'Investor Query Management will reply by email.';
+      title.textContent = 'Thank you, ' + p.name.split(' ')[0] + '. Your question is with us.';
+      form.hidden = true;
+      successEl.hidden = false;
+      title.focus({ preventScroll: true });
+    }
+
+    function send(p) {
+      setSending(true);
+      var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+      var finished = false;
+      var timer = setTimeout(function () {
+        if (finished) return;
+        finished = true;
+        if (ctrl) ctrl.abort();
+        setSending(false);
+        showAlert('network', 'Your question took too long to reach NorthBridge Investments. It is still here; please try again.');
+      }, CONFIG.timeoutMs);
+      fetch(CONFIG.endpoint, {
+        method: 'POST',
+        mode: 'cors',
+        credentials: 'omit',
+        cache: 'no-store',
+        referrerPolicy: 'no-referrer',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(p),
+        signal: ctrl ? ctrl.signal : undefined
+      })
+        .then(function (res) { return res.text().then(function (text) { return { res: res, data: parseJson(text) }; }); })
+        .then(function (r) {
+          if (finished) return;
+          finished = true;
+          clearTimeout(timer);
+          setSending(false);
+          if (r.res.ok && r.data && r.data.ok === true) { showSuccess(r.data, p); return; }
+          var msg = r.data && typeof r.data.error === 'string' && r.data.error.trim() ? r.data.error.trim() : 'We couldn’t accept this question just now. Please try again in a few minutes.';
+          showAlert('error', msg);
+        })
+        .catch(function () {
+          if (finished) return;
+          finished = true;
+          clearTimeout(timer);
+          setSending(false);
+          showAlert('network', 'Please check your connection and try again. Your question is still here.');
+        });
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (sending) return;
+      attempted = true;
+      hideAlert();
+      var firstInvalid = validateAll();
+      if (firstInvalid) {
+        if (statusEl) statusEl.textContent = 'Please check the highlighted fields.';
+        firstInvalid.focus();
+        return;
+      }
+      send(payload());
+    });
+
+    retryBtn.addEventListener('click', function () {
+      if (typeof form.requestSubmit === 'function') form.requestSubmit(); else submitBtn.click();
+    });
+
+    $('#ask-again').addEventListener('click', function () {
+      form.reset();
+      attempted = false;
+      FIELDS.forEach(function (f) { setError(f, ''); });
+      hideAlert();
+      if (statusEl) statusEl.textContent = '';
+      successEl.hidden = true;
+      form.hidden = false;
+      document.getElementById('q-name').focus();
+    });
+
+    $$('[data-scroll-ask]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        scrollToEl($('#ask'));
+        setTimeout(function () { var el = document.getElementById('q-name'); if (el) el.focus({ preventScroll: true }); }, 450);
+      });
+    });
+  }
+
   function initYear() {
     $$('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
   }
@@ -502,6 +690,7 @@
     initPortfolio();
     initTexture();
     initForm();
+    initAskForm();
     initYear();
   }
 
